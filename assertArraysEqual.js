@@ -1,12 +1,15 @@
 
 const eqArrays = function (arrey1, arrey2) {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arrey1.length; i += 1) {
+  if (arrey1.length !== arrey2.length) {
+    return false;
+  } else {
+  for (let i = 0; i < arrey1.length; i ++) {
     if (arrey1[i] !== arrey2[i]) {
       return false;
     }
   }
   return true;
+}
 };
 
 const assertArraysEqual = function (arrey1, arrey2) {
@@ -16,3 +19,7 @@ const assertArraysEqual = function (arrey1, arrey2) {
     console.log(`Assertion Passed: [${arrey1}] === [${arrey2}]`);
   }
 };
+assertArraysEqual([1, 2, 3], [1, 2, 3]); //  PASS
+assertArraysEqual([1, 2], [1, 2, 3]); //  fail
+assertArraysEqual([1, 2, 4], [1, 2, 3]); // fail
+assertArraysEqual([3, 2, 1], [1, 2, 3]); // fail
