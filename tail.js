@@ -10,6 +10,6 @@ const tail = function (array) {
   return !array ? [] : array.slice(1, array.length);
 };
 
-const words = ['Yo Yo', 'Lighthouse', 'Labs'];
+const words = ['Hi', 'Lighthouse', 'Labs'];
 tail(words);
 assertEqual(words.length, 3);
