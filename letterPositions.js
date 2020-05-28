@@ -1,27 +1,23 @@
 const eqArrays = function (arrey1, arrey2) {
-  //if arreys lenght are different, return false
   if (arrey1.length !== arrey2.length) {
     return false;
   } else {
   for (let i = 0; i < arrey1.length; i ++) {
-    //return false if both arrays differ for an element
     if (arrey1[i] !== arrey2[i]) {
       return false;
-      }
-}
+    }
+  }
   return true;
 }
 };
 
 const assertArraysEqual = function (arrey1, arrey2) {
-    if (eqArrays(array1, array2) === true) {
-    console.log(`Assertion Passed: ${arrey1} === ${arrey2}`);
+  if (!eqArrays(arrey1, arrey2)) {
+    console.log(`Assertion Failed: [${arrey1}] === [${arrey2}]`);
   } else {
-    console.log(`Assertion Failed: ${arrey1} === ${arrey2}`);
-  
+    console.log(`Assertion Passed: [${arrey1}] === [${arrey2}]`);
   }
-}
-
+};
 
 
 //CODE HERE
