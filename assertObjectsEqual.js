@@ -1,33 +1,32 @@
-//=========================Copy your eqObjects function into this new file.
 const eqObjects = function(object1, object2) {
-    // Returns true if both objects are identical(identical keys & values)
-    //Othervise return false
+  // Returns true if both objects are identical(identical keys & values)
+  //Othervise return false
 
-    // 1. Testing number of keys
-const keys1 = Object.keys(object1); //keys of object1
-const keys2 = Object.keys(object2); //keys of object2
-   if (keys1.length !== keys2.length) {
-     return false;
-   }
+  // 1. Testing number of keys
+  const keys1 = Object.keys(object1); //keys of object1
+  const keys2 = Object.keys(object2); //keys of object2
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
 
-// 2. Testing if both objects have the same keys name
+  // 2. Testing if both objects have the same keys name
   for (let key of keys1) {
     if (! keys2.includes(key)) {
       return false;
     }
- };
+  }
 
-   // 3. Testing values of keys in each objects, if each key on each object has the same value
-   for (let key of keys1) {
-      const value1 = object1[key];
-      const value2 = object2[key];
-        if (Array.isArray(value1) && Array.isArray(value2)) {
+  // 3. Testing values of keys in each objects, if each key on each object has the same value
+  for (let key of keys1) {
+    const value1 = object1[key];
+    const value2 = object2[key];
+    if (Array.isArray(value1) && Array.isArray(value2)) {
       // check if both val1 and val 2 are arrays
-      if (!eqArrays(value1,value2)) {
+      if (!Array.isArray(value1,value2)) {
         return false;
       }
    
-      } else  {
+    } else  {
       // both values are of primitive type
       if (value1 !== value2) {
         return false;
