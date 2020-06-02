@@ -1,13 +1,19 @@
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === {expected}`);
-  } else {
-    console.log(`Assertion Failed: ${actual} !== {expected}`);
-  }
-  
-};
 
+const assertEqual = require('./assertEqual');
+
+
+//remove the function definition for assertEqual from this file . Function definition const assertEqual = function(...) {...}
+//const assertEqual = function(actual, expected) {
+  //if (actual === expected) {
+    //console.log(`✅✅✅ Assertion Passed: ${actual} === {expected}`);
+  //} else {
+   // console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== {expected}`);
+ // }
+  //};
+
+
+//Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function (arrey1, arrey2) {
   if (arrey1.length !== arrey2.length) { //if arrays are of different length, return false
     return false;
@@ -21,7 +27,5 @@ const eqArrays = function (arrey1, arrey2) {
 }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); //pass
-assertEqual(eqArrays([1, 3], [1, 2, 3]), true); //  fail
-assertEqual(eqArrays([1, 2, 5], [1, 2, 6]), true); //  fail
-assertEqual(eqArrays([4, 3, 1], [1, 3, 4]), true); // => should fail
+
+module.exports = eqArrays;

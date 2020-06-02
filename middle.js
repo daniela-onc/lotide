@@ -1,8 +1,15 @@
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion Failed: [${actual}] === [${expected}]`);
+
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
+
+
+
+/*
+const assertArraysEqual = function(arrey1, arrey2) {
+  if (!eqArrays(arrey1, arrey2)) { //or if arraey1 !== array2
+    console.log(`🛑🛑🛑 Assertion Failed: [${arrey1}] !== [${arrey2}]`);
   } else {
-    console.log(`Assertion Passed: [${actual}] === [${expected}]`);
+    console.log(`✅✅✅ Assertion Passed: [${arrey1}] === [${arrey2}]`);
   }
 };
 
@@ -15,17 +22,23 @@ const eqArrays = function (arrey1, arrey2) {
   }
   return true;
 };
+*/
 
 
-var numArr = [1, 2, 3, 4, 5, 6, 7, 8]
-var middle = Math.floor(numArr.length / 2);
 
-function findMiddle () {
+function findMiddle (numArr) {
+  var middle = Math.floor(numArr.length / 2);
+
   if(numArr.length % 2 === 0) {
     console.log('middle numbs when array length is even: ' + numArr[middle -1] + ' ' + numArr[middle]);
   } else {
     console.log('middle num when array length is odd: ' + numArr[middle]);
   }
+  return numArr;
 }
 
-findMiddle();
+//findMiddle();
+//var numArr = [1, 2, 3, 4, 5, 6, 7, 8]
+//var middle = Math.floor(numArr.length / 2);
+
+module.exports = findMiddle;

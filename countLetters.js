@@ -1,25 +1,29 @@
 const assertEqual = function(actual, expected) {
-  return (actual + expected);
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === {expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== {expected}`);
+  }
 };
 
-// TEST CODE
-console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.assert(assertEqual(1, 1));
+console.assert(assertEqual("Lighthouse Labs", "Bootcamp")); //failed
+console.assert(assertEqual(1, 1)); //pass
 
+//The function countLetter take in a sentence (as a string). Return a count of each of the letters in that sentence. Result return is an object (leters - count of # displayed)
+const countLetters = function(string) {
+  let result = {}; //the return result is an object
+  let noSpace = string.split(' ').join(''); //remove space of string
 
-function countLetters (string) {
-  var noSpace = string.split(' ').join(''); //remove space of string
-  var object = {};
-
-  for (var i = 0; i < noSpace.length; i++) {
-    if (object[noSpace[i]] === undefined) {
-      object[noSpace[i]] = 1;
+  for (let i = 0; i < noSpace.length; i++) {
+    if (result[noSpace[i]] === undefined) {
+      result[noSpace[i]] = 1;
     } else {
-      object[noSpace[i]] += 1
+      result[noSpace[i]] += 1;
 
     }
-    }
-return object; //return a count of each letter(spaces not counted) of the function sentence
-}
+  }
+  return result; //return a count of each letter(spaces are not counted) of the function sentence
+};
+    
 
 console.log(countLetters('lighthouse in the house'));

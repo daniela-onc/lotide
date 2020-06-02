@@ -10,12 +10,13 @@ const eqArrays = function (arrey1, arrey2) {
 
 const assertArraysEqual = function (arrey1, arrey2) {
   if (!eqArrays(arrey1, arrey2)) {
-    console.log(`Assertion Failed: [${arrey1}] === [${arrey2}]`);
+    console.log(`⛔️ Assertion Failed: [${arrey1}] !== [${arrey2}]`);
   } else {
-    console.log(`Assertion Passed: [${arrey1}] === [${arrey2}]`);
+    console.log(`✅ Assertion Passed: [${arrey1}] === [${arrey2}]`);
   }
 };
 
+//Implement without which will return a subset of a given array, removing unwanted elements.
 const without = function (source, itemsToRemove) {
   return source.filter((item) => !itemsToRemove.includes(item));
 };
