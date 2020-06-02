@@ -41,4 +41,8 @@ assertArraysEqual(result['h'], [0]); //pass
 assertArraysEqual(result['l'], [2,3,9]); //fail
 assertArraysEqual(result['e'], [8,9,10]); //fail
 
+<<<<<<< HEAD
 assertArraysEqual(letterPositions("hello").e, [1]);
+=======
+assertArraysEqual(letterPositions("hello").e, [1]);
+>>>>>>> d808733677f88e50c41c72bfe8dc24fa12d9813e

@@ -12,7 +12,11 @@ console.assert(assertEqual(1, 1)); //pass
 
 //countOnly will be given an array and an object. It will return an object containing counts of everything that the input object listed. function report back #of instancres of each stringfound in allItems array of string
 
+<<<<<<< HEAD
 const countOnly = function(allItems, itemsToCount) { //declare the function countOnly. allItems: array of string taht we need to look through.  itemsToCount: object specifying what we count
+=======
+const countOnly = function(allItems, itemsToCount) { //declare the function countOnly
+>>>>>>> d808733677f88e50c41c72bfe8dc24fa12d9813e
   const results = {};  //new empty object named result
 
   for (const item of allItems) { //for..of loop to scan the entire list of names

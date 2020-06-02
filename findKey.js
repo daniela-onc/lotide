@@ -35,4 +35,8 @@ findKey({
 }, x => x.stars === 2); // display "noma"
 
 console.assert(assertEqual("Lighthouse Labs", "Bootcamp")); //failed
+<<<<<<< HEAD
 console.assert(assertEqual(1, 1)); //pass
+=======
+console.assert(assertEqual(1, 1)); //pass
+>>>>>>> d808733677f88e50c41c72bfe8dc24fa12d9813e

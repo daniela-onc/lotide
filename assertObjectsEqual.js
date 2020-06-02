@@ -1,4 +1,3 @@
-//=========================Copy your eqObjects function into this new file.
 const eqObjects = function(object1, object2) {
   // Returns true if both objects are identical(identical keys & values)
   //Othervise return false
